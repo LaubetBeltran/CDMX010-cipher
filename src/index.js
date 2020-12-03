@@ -12,27 +12,60 @@ function comenzar(){
   
   
   
-  // PARA CIFRAR UN MENSAJE
-  function obtenerMensajeCifrado() 
-  {
-    var mensaje= document.getElementById("mensaje").value;
-    //var numeroCifrado= document.getElementById("numeroCifrado");
-    //var selecionado = numeroCifrado.value;
-    //console.log(typeof selecionado, typeof mensaje);
-    var numeroDeCifrado = document.getElementById("numeroDeCifrado").value;
-     //document.getElementById("outputMensaje").innerHTML=numeroDeCifrado
-    
-    document.getElementById('MensajeCifrado').innerHTML=mensaje + "      (Número de cifrado:" + numeroDeCifrado + ").";
-  
-    //alert("Tu mensaje con " + numeroDeCifrado + " desplazamiento(s) de letra(s) está listo: " + mensaje);
-  
+// PARA CIFRAR UN MENSAJE
+function obtenerMensajeCifrado(){             
+  var texto = document.getElementById('mensaje').value;
+  var offset = parseInt (document.getElementById('numeroDeCifrado').value);               
+        for(var i = 0; i <= 1000; i++) {
+          var num = texto.charCodeAt(0 +i);
+          if(num >=65 && num <=90) {
+          var resta = num - 65;
+          var suma = resta + offset;
+          var residuo = suma % 26;
+          var numFinal = residuo + 65;
+          var cifrado = String.fromCharCode(numFinal);
+          var text = document.createTextNode(cifrado); 
+          document.getElementById('MensajeCifrado').appendChild(text);
+
+         // document.write(cifrado);  
+          } else if(num == 32){
+            var espacio = document.createTextNode(" "); 
+            document.getElementById('MensajeCifrado').appendChild(espacio);
+          } else if (num == 46){
+            var punto = document.createTextNode(".");
+            document.getElementById('MensajeCifrado').appendChild(punto);
+          } else if (num == 44){
+            var coma = document.createTextNode(","); 
+            document.getElementById('MensajeCifrado').appendChild(coma);
+          } else if (num >=97 && num <=122) {
+            var restaMinuscula = num - 97;
+            var sumaMinuscula = restaMinuscula + offset;
+            var residuoMinuscula = sumaMinuscula % 26;
+            var numFinalMinuscula = residuoMinuscula + 97;
+            var cifradoMinuscula = String.fromCharCode(numFinalMinuscula);
+
+            var textMinuscula= document.createTextNode(cifradoMinuscula); 
+          document.getElementById('MensajeCifrado').appendChild(textMinuscula);
+            //document.write(cifradoMinuscula);
+          } else {
+            var simboloDesconocido = String.fromCharCode(num);
+            var textoDesconicido = document.createTextNode(simboloDesconocido);
+          document.getElementById('MensajeCifrado').appendChild(textoDesconicido);
+            //document.write(simboloDesconocido);
+          }
+          }
+
+
+
+    //DOM PARA OCULTAR INPUT E IR AL OUPUT
     location.href = '#outputCifrarMensaje'
     document.getElementById("outputCifrarMensaje").style.display = 'block';
     document.getElementById("pantallaInput").style.display = 'none';
-  
-    //document.write("Tu mensaje con " + selecionado + " desplazamiento(s) de letra(s) está listo: " + mensaje);
-  
-  }
+
+
+    //document.getElementById('MensajeCifrado').innerHTML;
+  } 
+
   
   // PARA DESCIFRAR UN MENSAJE
   function obtenerMensajeDescifrado() 
