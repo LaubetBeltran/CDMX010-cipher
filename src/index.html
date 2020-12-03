@@ -4,11 +4,104 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <!--<script src="index.js" type="module"></script>-->
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+  
+    <header id="encabezado"> 
+      
+     <h1  ><a id="enlaceDeInicio" href="javascript:refrescarUrl()">Mensajes cifrados  <img style="width:40px; height:40px;" src="assets/img/icono.png"></a></h1>
+
+
+    </header>
+    <nav>
+      <ul id="navegacion">
+        <li><a href= "javascript:mostrarNavegar1()">¿Qué es el Cifrado César?</a></li>
+        <li><a href= "javascript:mostrarNavegar2()">¿Qué utilidad tiene?</a></li>
+        <li><a href= "javascript:mostrarNavegar3()">¿Cómo cifrar o desifrar un mensaje?</a></li>
+      </ul>
+    </nav>
+     <br>
+     <br>
+    <div id="pantallaInicio">
+      <header>
+        <h1>Te damos la bienvenida a Mensajes cifrados</h1>
+      </header>
+      <p>Aquí podrás transformar tus mensajes a Cifrado César para que sean más seguros. También podrás descifrar un mensaje recibido con el número de cifrado que te indicaron al recibir un mensaje en Cifrado César. </p>
+      <br>
+
+      <p>Prueba cifrar o descifrar un mansaje:</p>
+      
+      <button id="goInput" onclick="comenzar();">Cifrar o Descifrar un mensaje</button>
     </div>
-    <script src="index.js" type="module"></script>
+
+
+    <div id ="pantallaInput">
+      <p> Ingresa un mensaje (máx 1000 caracteres):</p>
+      <input type="text" id="mensaje" name="mensaje" required
+       minlength="1" maxlength="1000" style="width: 500px; height: 98px"size=80>
+
+      <br>
+      <br> 
+      <label>Define un número de cifrado césar (del 1 al 26)</label> 
+      <input type="number" id="numeroDeCifrado" max="26" min="1">
+      <br>
+      <br>
+  
+    <button id="cifrarMensaje" onclick='obtenerMensajeCifrado();'>Cifrar Mensaje</button>
+    <button id="descifrarMensaje" onclick='obtenerMensajeDescifrado();'>Descifrar Mensaje</button>
+    </div>
+
+    <div id="outputCifrarMensaje">
+     <h1> Tu mensaje cifrado ya está listo: </h1>
+  
+      <output id="MensajeCifrado"></output>
+      <br>
+      <br>
+      <button id="nuevoMensaje1" onclick="nuevoMensaje1();">Cifrar/Descifrar otro mensaje</button>
+      <button id="irAInicio2" onclick="irAInicioClean();"> Volver a inicio</button>
+    </div>
+
+    <div id="outputDescifrarMensaje">
+     <h1> Desciframos tu mensaje y dice esto: </h1>
+  
+      <output id="MensajeDescifrado"></output>
+      <br>
+      <br>
+      <button id="nuevoMensaje2" onclick="nuevoMensaje2();"> Cifrar/Descifrar otro mensaje</button>
+      <button id="irAInicio2" onclick="irAInicioClean();"> Volver a inicio</button>
+    </div>
+
+    <div id="navegar1"> 
+      <header>
+      <h1>¿Qué es el Cifrado César?</h1>
+      </header>
+      <p>En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.</p>
+      <br>
+      <button id="nuevoMensaje3" onclick="nuevoMensaje3();">Cifrar/Descifrar un mensaje</button>
+      <button id="irAInicio3" onclick="irAInicio();"> Volver a inicio</button>
+    </div>
+
+    <div id="navegar2">
+      <header>
+        <h1>¿Qué utilidad tiene el cifrado césar?</h1>
+      </header> 
+      <button id="nuevoMensaje4" onclick="nuevoMensaje4();">Cifrar/Descifrar un mensaje</button>
+      <button id="irAInicio4" onclick="irAInicio();"> Volver a inicio</button>
+    </div>
+
+    <div id="navegar3">
+      <header>
+        <h1>¿Cómo puedo cifrar o descifrar un mensaje?</h1>
+      </header> 
+      <button id="nuevoMensaje5" onclick="nuevoMensaje5();">Cifrar/Descifrar un mensaje</button>
+      <button id="irAInicio5" onclick="irAInicio();"> Volver a inicio</button>
+    </div>
+    <br>
+    <br>
+    <footer id="barraFinal">
+
+    </footer>
   </body>
 </html>

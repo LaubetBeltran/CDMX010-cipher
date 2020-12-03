@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap');
+#body{
+  
+}
+
+#encabezado{
+  background-color: rgb(227, 196, 228);
+  font-family: Major Mono Display;
+  padding: 40px;
+}
+#pantallaInicio{
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+#pantallaInput{
+  display: none;
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#outputCifrarMensaje{
+  display: none;
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#outputDescifrarMensaje{
+  display: none;
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#navegar1{
+  display: none;
+  font-family: Dosis ;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#navegar2{
+  display: none;
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#navegar3{
+  display: none;
+  font-family: Dosis;
+  background: url("assets/img/Fondo.jpg");
+}
+
+#enlaceDeInicio{
+  text-decoration: none;
+  color: black;
+}
+
+#navegacion{
+  padding :0;
+}
+#navegacion li {
+  display: inline;
+}
+
+#navegacion li a{
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 14px;
+  background-color: #bbebe4 ;
+  color: rgb(12, 9, 9);
+  padding: 10px;
+  float: left;
+}
+
+#navegacion li a:hover{
+  background-color: #fff;
+  margin-top: -2;
+  padding-bottom: 12px;
+}
+
+
+#cifrarMensaje{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#cifrarMensaje:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#descifrarMensaje{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#descifrarMensaje:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#nuevoMensaje1{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#nuevoMensaje1:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#nuevoMensaje2{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#nuevoMensaje2:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#nuevoMensaje3{
+  background-color: black;
+  color: #fff;
+  padding: 8px; 
+  font-family: Dosis;
+}
+
+#nuevoMensaje3:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#nuevoMensaje4{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#nuevoMensaje4:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#nuevoMensaje5{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#nuevoMensaje5:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#goInput{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+  border-radius: 15px;
+}
+
+#goInput:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+
+#irAInicio1{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#irAInicio1:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#irAInicio2{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#irAInicio2:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+#irAInicio3{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#irAInicio3:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+#irAInicio4{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#irAInicio4:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+#irAInicio5{
+  background-color: black;
+  color: #fff;
+  padding: 8px;
+  font-family: Dosis;
+}
+
+#irAInicio5:hover{
+  background-color: white;
+  color: black;
+  padding: 9px;
+}
+
+#barraFinal{
+    background-color: rgb(227, 196, 228);
+    padding: 40px;
+}
+
