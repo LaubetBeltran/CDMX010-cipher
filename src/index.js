@@ -14,7 +14,8 @@ function comenzar(){
 // PARA CIFRAR UN MENSAJE
 function obtenerMensajeCifrado(){             
   var texto = document.getElementById('mensaje').value;
-  var offset = parseInt (document.getElementById('numeroDeCifrado').value);               
+  var offset = parseInt (document.getElementById('numeroDeCifrado').value);
+  let mensajeCifrado = "";               
         for(var i = 0; i <= 1000; i++) {
           var num = texto.charCodeAt(0 +i);
           if(num >=65 && num <=90) {
@@ -23,18 +24,18 @@ function obtenerMensajeCifrado(){
           var residuo = suma % 26;
           var numFinal = residuo + 65;
           var cifrado = String.fromCharCode(numFinal);
-          var text = document.createTextNode(cifrado); 
-          document.getElementById('MensajeCifrado').appendChild(text);
-         // document.write(cifrado);  
+          
+         mensajeCifrado= mensajeCifrado.concat(cifrado);
+    
           } else if(num == 32){
-            var espacio = document.createTextNode(" "); 
-            document.getElementById('MensajeCifrado').appendChild(espacio);
+            mensajeCifrado = mensajeCifrado.concat(' ');
+
           } else if (num == 46){
-            var punto = document.createTextNode(".");
-            document.getElementById('MensajeCifrado').appendChild(punto);
+            mensajeCifrado = mensajeCifrado.concat('.');
+
           } else if (num == 44){
-            var coma = document.createTextNode(","); 
-            document.getElementById('MensajeCifrado').appendChild(coma);
+            mensajeCifrado = mensajeCifrado.concat(','); 
+
           } else if (num >=97 && num <=122) {
             var restaMinuscula = num - 97;
             var sumaMinuscula = restaMinuscula + offset;
@@ -42,16 +43,15 @@ function obtenerMensajeCifrado(){
             var numFinalMinuscula = residuoMinuscula + 97;
             var cifradoMinuscula = String.fromCharCode(numFinalMinuscula);
 
-            var textMinuscula= document.createTextNode(cifradoMinuscula); 
-          document.getElementById('MensajeCifrado').appendChild(textMinuscula);
-            //document.write(cifradoMinuscula);
+            mensajeCifrado = mensajeCifrado.concat(cifradoMinuscula);
+
           } else {
             var simboloDesconocido = String.fromCharCode(num);
-            var textoDesconicido = document.createTextNode(simboloDesconocido);
-            document.getElementById('MensajeCifrado').appendChild(textoDesconicido);
-            //document.write(simboloDesconocido);
+            mensajeCifrado = mensajeCifrado.concat(simboloDesconocido); 
           }
           }
+
+      document.getElementById('MensajeCifrado').innerHTML= mensajeCifrado
 
 
 
@@ -60,8 +60,6 @@ function obtenerMensajeCifrado(){
     document.getElementById("outputCifrarMensaje").style.display = 'block';
     document.getElementById("pantallaInput").style.display = 'none';
 
-
-    //document.getElementById('MensajeCifrado').innerHTML;
   } 
 
   
