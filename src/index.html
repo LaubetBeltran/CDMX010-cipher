@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
-    <!--<script src="index.js" type="module"></script>-->
+  
+    <script src="index.js" ></script>
   </head>
   <body>
   
@@ -77,7 +77,13 @@
       <header>
       <h1>¿Qué es el Cifrado César?</h1>
       </header>
-      <p>En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.</p>
+      <section id="parrafo1Nav1">
+        <p>En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.</p>
+        <br>
+        <img src="assets/img/cifradoCesar.png" style="width:600px; height:300px;">
+        
+      </section>
+      <br>
       <br>
       <button id="nuevoMensaje3" onclick="nuevoMensaje3();">Cifrar/Descifrar un mensaje</button>
       <button id="irAInicio3" onclick="irAInicio();"> Volver a inicio</button>
@@ -87,6 +93,15 @@
       <header>
         <h1>¿Qué utilidad tiene el cifrado césar?</h1>
       </header> 
+      <section id="parrafo1Nav2">
+        <p>Piénsalo. El Cifrado Cesar te permite escribir mensajes secretos en los que tú puedes elegir un numero de desplazamientos de letras para cifrarlo. Podría resultar muy útil para proteger información sensible que quieras compartir con alguien más. Existe una amplia gama de aplicaciones para ese tipo de mensajes, desde cifrar mensajes en medio de una zona de conflictos, conservar en secreto la receta de la familia, mantener la exclusividad de un evento, proteger identidad del ganador en algún certamen para que no se sepa antes de tiempo o incluso para sorprender a alguien con una carta de amor muy original.
+          <br>
+          <br>
+          Con Mensajes cifrados puedes cifrar un mensaje definiendo el número de desplazamientos para que quien reciba el mensaje pueda descifrarlo al alcance de un “Click”.
+          </p>
+      </section>
+      <br>
+
       <button id="nuevoMensaje4" onclick="nuevoMensaje4();">Cifrar/Descifrar un mensaje</button>
       <button id="irAInicio4" onclick="irAInicio();"> Volver a inicio</button>
     </div>
@@ -95,6 +110,31 @@
       <header>
         <h1>¿Cómo puedo cifrar o descifrar un mensaje?</h1>
       </header> 
+      <section id="parrafo1Nav3">
+        <p>Mensajes cifrados te permitirá cifrar mensajes al estilo “Cifrado César” de una manera muy sencilla.
+          <br>
+          <br>
+          Primero, debes presionar el botón “cifrar o descifrar un mensaje”. Este botón te llevará a la página dónde podrás ingresar tu mensaje, la cual lucirá así:
+          </p>
+      </section>
+      <img src="assets/img/pantallaInputMargen.png">
+      <br>
+      <br>
+      <secction id="parrafo2Nav3">
+        <p>Cuando estés en esa página, escribe tu mensaje en el cuadro de texto y selecciona el número de desplazamientos para cifrar o descifrar tu mensaje. (Máximo 1000 caracteres, sin acentos).
+          <br>
+          <br>
+          NOTA: El cifrado césar solo cifra letras del alfabeto, no números ni otro tipo de signos, pero sí se pueden incluir en el mensaje, sólo que se conservarán tal y como están. Por el momento la letra “ñ” y las letras con acentos o con algún otro tipo de signo no sufren ninguna transformación. 
+          <br>
+          <br>
+          Por último, da click en el botón “Cifrar mensaje” si quieres que tu mensaje sea cifrado o da click en el botón “Descifrar un mensaje” para descifrarlo.
+          ¡Y listo! Obtendrás tu mensaje cifrado o descifrado.  Verás qué sencillo es.
+          <br>
+          <br>
+          Podrás volver a cifrar o descifrar mensajes las veces que quieras presionando el botón “Cifrar o descifrar un mensaje nuevo”.
+          </p>
+      </secction>
+      <br>
       <button id="nuevoMensaje5" onclick="nuevoMensaje5();">Cifrar/Descifrar un mensaje</button>
       <button id="irAInicio5" onclick="irAInicio();"> Volver a inicio</button>
     </div>

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap');
-#body{
-  
+
+
+body{
+  background-color: whitesmoke;
 }
 
 #encabezado{
@@ -11,42 +13,42 @@
 }
 #pantallaInicio{
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 #pantallaInput{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #outputCifrarMensaje{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #outputDescifrarMensaje{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #navegar1{
   display: none;
   font-family: Dosis ;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #navegar2{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #navegar3{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/Fondo.jpg");
+  background: url("assets/img/fondo.jpg");
 }
 
 #enlaceDeInicio{
@@ -250,4 +252,3 @@
     background-color: rgb(227, 196, 228);
     padding: 40px;
 }
-
