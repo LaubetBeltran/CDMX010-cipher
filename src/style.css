@@ -1,54 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap');
-
-
 body{
-  background-color: whitesmoke;
+  background: url("assets/img/fondo.jpg");
 }
 
 #encabezado{
   background-color: rgb(227, 196, 228);
   font-family: Major Mono Display;
   padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 #pantallaInicio{
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 80%;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;  
 }
 #pantallaInput{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 5%;
 }
 
 #outputCifrarMensaje{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 80%;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;
 }
 
 #outputDescifrarMensaje{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;
 }
 
 #navegar1{
   display: none;
-  font-family: Dosis ;
-  background: url("assets/img/fondo.jpg");
+  font-family: Dosis;
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;
 }
 
 #navegar2{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;
 }
 
 #navegar3{
   display: none;
   font-family: Dosis;
-  background: url("assets/img/fondo.jpg");
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius:5%;
 }
 
 #enlaceDeInicio{
@@ -58,9 +86,14 @@ body{
 
 #navegacion{
   padding :0;
+  
+  
+  
+
 }
 #navegacion li {
   display: inline;
+  
 }
 
 #navegacion li a{
@@ -70,7 +103,10 @@ body{
   background-color: #bbebe4 ;
   color: rgb(12, 9, 9);
   padding: 10px;
-  float: left;
+  float: left; 
+  width: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 #navegacion li a:hover{
