@@ -52,7 +52,8 @@ function obtenerMensajeCifrado(){
     }
   }
 
-      document.getElementById('MensajeCifrado').innerHTML= mensajeCifrado
+      document.getElementById('MensajeCifrado').innerHTML= mensajeCifrado;
+      document.getElementById('offsetDeCifrado').innerHTML= "(Número de Cifrado César = " + offset + ").";
 
 
 
@@ -104,7 +105,8 @@ function obtenerMensajeDescifrado() {
           
   }
     
-    document.getElementById('MensajeDescifrado').innerHTML= mensajeDescifrado  
+    document.getElementById('MensajeDescifrado').innerHTML= mensajeDescifrado;
+    document.getElementById('offsetDeDescifrado').innerHTML= "(Número de Cifrado César = " + offset + ").";   
      
     //DOM PARA OCULTAR INPUT E IR AL OUPUT CON EL MENSAJE DESCIFRADO
     location.href = '#outputDescifrarMensaje'

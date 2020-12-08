@@ -40,12 +40,12 @@
     <div id ="pantallaInput">
       <p> Ingresa un mensaje (máx 1000 caracteres, sin acentos y sin la letra"Ñ") :</p>
       <input type="text" id="mensaje" name="mensaje" required
-       minlength="1" maxlength="1000" style="width: 500px; height: 98px"size=80>
+       minlength="1" maxlength="1000" style="width: 80%; height: 98px"size=80>
 
       <br>
       <br> 
       <label>Define un número de cifrado césar (del 1 al 26)</label> 
-      <input type="number" id="numeroDeCifrado" value="0" min="0">
+      <input type="number" id="numeroDeCifrado" value="0" min="0" style="width: 15%;">
       <br>
       <br>
   
@@ -58,6 +58,8 @@
   
       <output id="MensajeCifrado"></output>
       <br>
+      <output id="offsetDeCifrado"></output>
+      <br>
       <br>
       <button id="nuevoMensaje1" onclick="nuevoMensaje1();">Cifrar/Descifrar otro mensaje</button>
       <button id="irAInicio2" onclick="irAInicioClean();"> Volver a inicio</button>
@@ -67,6 +69,8 @@
      <h1> Desciframos tu mensaje y dice esto: </h1>
   
       <output id="MensajeDescifrado"></output>
+      <br>
+      <output id="offsetDeDescifrado"></output>
       <br>
       <br>
       <button id="nuevoMensaje2" onclick="nuevoMensaje2();"> Cifrar/Descifrar otro mensaje</button>

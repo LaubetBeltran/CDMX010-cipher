@@ -288,3 +288,21 @@ body{
     background-color: rgb(227, 196, 228);
     padding: 40px;
 }
+
+#MensajeCifrado{
+  font-family: Dosis;
+  font-size: 18px;
+}
+#offsetDeCifrado{
+  font-family: Dosis;
+  font-size: 12px;
+}
+
+#MensajeDescifrado{
+  font-family: Dosis;
+  font-size: 18px;
+}
+#offsetDeDescifrado{
+  font-family: Dosis;
+  font-size: 12px;
+}
