@@ -27,6 +27,15 @@ body{
   margin: 40px auto;
   padding: 20px;
   border-radius: 5%;
+ 
+
+}
+
+input[type="text"] {
+  width: 70%;
+  height: 200px;
+
+
 }
 
 #outputCifrarMensaje{
@@ -305,4 +314,8 @@ body{
 #offsetDeDescifrado{
   font-family: Dosis;
   font-size: 12px;
+}
+#nota{
+  font-family: Dosis;
+  font-size: 10px;
 }
