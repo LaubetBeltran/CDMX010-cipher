@@ -8,14 +8,14 @@
 * [4. PANTALLA INPUT](#4-pantalla-input)
 * [5. PANTALLAS OUTPUT](#5-pantalla-output)
 * [6. SECCIONES INFORMATIVAS](#6-secciones-informativas)
-* [7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN.](#7-contenido-secciones-informativas-de-la-aplicacion)
+* [7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN](#7-contenido-de-las-secciones-informativas-de-la-aplicacion)
 
 
 ***
 
 ## 1. Mensajes cifrados
 
-_Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes al estilo “cifrado césar”. Esto permite que pueda ser utilizada por una gran variedad de usuarios que buscan cifrar mensajes, ya sea para mantener la confidencialidad de información que les interese resguardar o simplemente para enviar mensajes muy originales. 
+_Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes al estilo “Cifrado César”. Esto permite que pueda ser utilizada por una gran variedad de usuarios que buscan cifrar mensajes, ya sea para mantener la confidencialidad de información que les interese resguardar o simplemente para enviar mensajes muy originales. 
 Por ello se decidió crear una aplicación con una interfaz sencilla y muy informativa. 
 Este es el prototipo inicial del diseño de la aplicación:
 
@@ -94,7 +94,7 @@ NOTA: Este botón no hace “reset” de la “Pantalla input”, es decir, no r
 Dentro de estas pantallas también se incluyó un botón “Volver al inicio” para facilitar la navegación del usuario por las diferentes secciones de la aplicación.
 
 
-## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN.
+## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN
 
 ### ¿Qué es el Cifrado César?
 En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
@@ -126,3 +126,5 @@ Por último, da click en el botón “Cifrar mensaje” si quieres que tu mensaj
 ¡Y listo! Obtendrás tu mensaje cifrado o descifrado.  Verás qué sencillo es.
 
 Podrás volver a cifrar o descifrar mensajes las veces que quieras presionando el botón “Cifrar o descifrar un mensaje nuevo”.
+
+
