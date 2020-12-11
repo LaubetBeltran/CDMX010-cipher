@@ -1,7 +1,7 @@
 const cipher = {
   encode : function(offset, string) {
     let mensajeCifrado = "";               
-    for(var i = 0; i <= 1000; i++) {
+    for(var i = 0; i < string.length; i++) {
       var num = string.charCodeAt(0 +i);
       if(num >=65 && num <=90) {
         var resta = num - 65;
@@ -40,7 +40,7 @@ const cipher = {
   },
   decode: function(offset, string) {
   let mensajeDescifrado = "";
-  for(var i = 0; i <= 1000; i++) {
+  for(var i = 0; i < string.length; i++) {
     var num = string.charCodeAt(0 +i);
     if(num >=65 && num <=90) {
       var resta = num - 65;
