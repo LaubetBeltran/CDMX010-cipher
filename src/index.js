@@ -1,7 +1,5 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
-console.log(cipher.encode('hola', 10))
 
 ///////////////////////////////////////7 aqui se ivoca toda la funcionalidad que interactua con el dom
 // Botón de la página de inicio que lleva a la pantalla input.
@@ -15,9 +13,9 @@ document.getElementById('goInput').addEventListener('click', comenzar);
  
 // PARA CIFRAR UN MENSAJE
 function obtenerMensajeCifrado(){             
-  var texto = document.getElementById('mensaje').value;
+  var string = document.getElementById('mensaje').value;
   var offset = parseInt (document.getElementById('numeroDeCifrado').value);
-  const mensaje = cipher.encode(texto, offset);
+  const mensaje = cipher.encode(offset, string);
  
   document.getElementById('MensajeCifrado').innerHTML= mensaje;
   document.getElementById('offsetDeCifrado').innerHTML= "(Número de Cifrado César = " + offset + ").";
@@ -34,9 +32,9 @@ document.getElementById('cifrarMensaje').addEventListener('click', obtenerMensaj
   
   // PARA DESCIFRAR UN MENSAJE
 function obtenerMensajeDescifrado() {
-  var texto = document.getElementById('mensaje').value;
+  var string = document.getElementById('mensaje').value;
   var offset = parseInt (document.getElementById('numeroDeCifrado').value);
-  const mensaje = cipher.decode(texto, offset);
+  const mensaje = cipher.decode(offset, string);
     document.getElementById('MensajeDescifrado').innerHTML= mensaje;
     document.getElementById('offsetDeDescifrado').innerHTML= "(Número de Cifrado César = " + offset + ").";   
      
