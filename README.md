@@ -19,7 +19,7 @@ _Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes a
 Por ello se decidió crear una aplicación con una interfaz sencilla y muy informativa. 
 Este es el prototipo inicial del diseño de la aplicación:
 
-![prototipo](src/assets/img/prototipo.jpg)
+![prototipo](/src/assets/img/prototipo.jpg)
 
 ## 2. CABECERA
 
@@ -93,14 +93,13 @@ NOTA: Este botón no hace “reset” de la “Pantalla input”, es decir, no r
 
 Dentro de estas pantallas también se incluyó un botón “Volver al inicio” para facilitar la navegación del usuario por las diferentes secciones de la aplicación.
 
-***
 
 ## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN.
 
 ### ¿Qué es el Cifrado César?
 En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
 
-![cifrado-cesar](test\assets1\cifradoCesar.png)
+![cifrado-cesar](/assets1/cifradoCesar.png)
 
 Esta manera de cifrar resulta ser muy útil para mantener en secreto algunos mensajes, sin embargo, también suena algo muy laborioso, pero con Mensajes Cifrados esto es muy sencillo.
 Esta aplicación te permite cifrar y descifrar mensajes al estilo Cifrado César de una manera rápida y sencilla.  Únicamente tienes que ingresar tu mensaje y seleccionar el número de Cifrado César o de desplazamientos en el que quieras cifrar o descifrar tu mensaje.
@@ -118,7 +117,7 @@ Mensajes cifrados te permitirá cifrar mensajes al estilo “Cifrado César” d
 
 Primero, debes presionar el botón “cifrar o descifrar un mensaje”. Este botón te llevará a la página dónde podrás ingresar tu mensaje, la cual lucirá así:
 
-![pantalla-input-final](test\assets1\pantallaInputFinal.png)
+![pantalla-input-final](test/assets1/pantallaInputFinal.png)
 
 Cuando estés en esa página, escribe tu mensaje en el cuadro de texto y selecciona el número de desplazamientos para cifrar o descifrar tu mensaje. (Máximo 1000 caracteres, sin acentos).
 NOTA: El cifrado césar solo cifra letras del alfabeto, no números ni otro tipo de signos, pero sí se pueden incluir en el mensaje, sólo que se conservarán tal y como están. Por el momento la letra “ñ” ni las letras con acentos o algún otro tipo de signo sufren alguna transformación. 
