@@ -19,7 +19,7 @@ _Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes a
 Por ello se decidió crear una aplicación con una interfaz sencilla y muy informativa. 
 Este es el prototipo inicial del diseño de la aplicación:
 
-![prototipo](/src/assets/img/prototipo.jpg)
+![prototipo](test/assets1/prototipo.jpg)
 
 ## 2. CABECERA
 
@@ -99,7 +99,7 @@ Dentro de estas pantallas también se incluyó un botón “Volver al inicio” 
 ### ¿Qué es el Cifrado César?
 En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
 
-![cifrado-cesar](/assets1/cifradoCesar.png)
+![cifrado-cesar](test/assets1/cifradoCesar.png)
 
 Esta manera de cifrar resulta ser muy útil para mantener en secreto algunos mensajes, sin embargo, también suena algo muy laborioso, pero con Mensajes Cifrados esto es muy sencillo.
 Esta aplicación te permite cifrar y descifrar mensajes al estilo Cifrado César de una manera rápida y sencilla.  Únicamente tienes que ingresar tu mensaje y seleccionar el número de Cifrado César o de desplazamientos en el que quieras cifrar o descifrar tu mensaje.
