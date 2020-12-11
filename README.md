@@ -20,7 +20,7 @@ Por ello se decidió crear una aplicación con una interfaz sencilla y muy infor
 Este es el prototipo inicial del diseño de la aplicación:
 
 
-![](CDMX010-cipher\src\assets\img\cifradoCesar.png)
+![prototipo](CDMX010-cipher\src\assets\img\prototipo.jpg)
 
 
 
