@@ -8,7 +8,7 @@
 * [4. PANTALLA INPUT](#4-pantalla-input)
 * [5. PANTALLAS OUTPUT](#5-pantalla-output)
 * [6. SECCIONES INFORMATIVAS](#6-secciones-informativas)
-* [7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN](#7-contenido-de-las-secciones-informativas-de-la-aplicacion)
+* [7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACION](#7-contenido-de-las-secciones-informativas-de-la-aplicacion)
 
 
 ***
@@ -94,7 +94,7 @@ NOTA: Este botón no hace “reset” de la “Pantalla input”, es decir, no r
 Dentro de estas pantallas también se incluyó un botón “Volver al inicio” para facilitar la navegación del usuario por las diferentes secciones de la aplicación.
 
 
-## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN
+## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACION
 
 ### ¿Qué es el Cifrado César?
 En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
