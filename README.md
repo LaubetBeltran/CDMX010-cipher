@@ -19,7 +19,7 @@ _Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes a
 Por ello se decidió crear una aplicación con una interfaz sencilla y muy informativa. 
 Este es el prototipo inicial del diseño de la aplicación:
 
-![](src/assets/img/prototipo.jpg)
+![prototipo](src/assets/img/prototipo.jpg)
 
 ## 2. CABECERA
 
