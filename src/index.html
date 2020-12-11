@@ -38,13 +38,14 @@
 
 
     <div id ="pantallaInput">
-      <p> Ingresa un mensaje (máx 1000 caracteres, sin acentos y sin la letra"Ñ") :</p>
-      <input type="text" id="mensaje" name="mensaje" required
-       minlength="1" maxlength="1000" style="width: 80%; height: 98px"size=80>
+      <p> Ingresa un mensaje (máx 1000 caracteres) :</p>
+      <p id="nota">NOTA: La letra "ñ" y las letras con acentos o con otro tipo de caracter no sufriran ninguna transformación.</p>
+        <input type="text" id="mensaje" name="mensaje"  minlength="1" maxlength="1000" size="80">
+       <label id="conteoRevesoDeCaracteres"></label>
 
       <br>
       <br> 
-      <label>Define un número de cifrado césar (del 1 al 26)</label> 
+      <label>Define un número de cifrado césar</label> 
       <input type="number" id="numeroDeCifrado" value="0" min="0" style="width: 15%;">
       <br>
       <br>
@@ -85,9 +86,14 @@
         <p>En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.</p>
         <br>
         <img src="assets/img/cifradoCesar.png" style="width:80%; height:50%;">
-        
+        <br>
+        <p>Esta manera de cifrar resulta ser muy útil para mantener en secreto algunos mensajes, sin embargo, también suena algo muy laborioso, pero con Mensajes Cifrados esto es muy sencillo.
+          Esta aplicación te permite cifrar y descifrar mensajes al estilo Cifrado César de una manera rápida y sencilla.  Únicamente tienes que ingresar tu mensaje y seleccionar el número de Cifrado César o de desplazamientos en el que quieras cifrar o descifrar tu mensaje.
+          <br>
+          <br>
+          ¡Prueba con tu primer mensaje!
+          </p>
       </section>
-      <br>
       <br>
       <button id="nuevoMensaje3">Cifrar/Descifrar un mensaje</button>
       <button id="irAInicio3"> Volver a inicio</button>
@@ -121,7 +127,7 @@
           Primero, debes presionar el botón “cifrar o descifrar un mensaje”. Este botón te llevará a la página dónde podrás ingresar tu mensaje, la cual lucirá así:
           </p>
       </section>
-      <img src="assets/img/pantallaInputMargen.png" style="width:80%; height:50%;">
+      <img src="assets/img/pantallaInputFinal.png" style="width:80%; height:50%;">
       <br>
       <br>
       <secction id="parrafo2Nav3">
