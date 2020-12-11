@@ -2,340 +2,131 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Criterios a considerar](#9-Criterios-a-considerar)
+* [1. MENSAJES CIFRADOS](#1-mensajes-cifrados)
+* [2. CABECERA](#2-cabecera)
+* [3. PANTALLA PRINCIPAL](#3-pantalla-principal)
+* [4. PANTALLA INPUT](#4-pantalla-input)
+* [5. PANTALLAS OUTPUT](#5-pantalla-output)
+* [6. SECCIONES INFORMATIVAS](#6-secciones-informativas)
+* [7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN.](#7-contenido-secciones-informativas)
+
 
 ***
 
-## 1. Preámbulo
+## 1. Mensajes cifrados
 
-Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
-es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
-César lo usaba para enviar órdenes secretas a sus generales en los campos de
-batalla.
+_Mensajes cifrados_ es una aplicación que permite cifrar y descifrar mensajes al estilo “cifrado césar”. Esto permite que pueda ser utilizada por una gran variedad de usuarios que buscan cifrar mensajes, ya sea para mantener la confidencialidad de información que les interese resguardar o simplemente para enviar mensajes muy originales. 
+Por ello se decidió crear una aplicación con una interfaz sencilla y muy informativa. 
+Este es el prototipo inicial del diseño de la aplicación:
 
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
-El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es
-un tipo de cifrado por sustitución, es decir que cada letra del texto original
-es reemplazada por otra que se encuentra un número fijo de posiciones
-(desplazamiento) más adelante en el mismo alfabeto.
+![caeser-cipher1](src\assets\img\prototipo.jpg)
 
-Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
-* La letra A se cifra como D.
-* La palabra CASA se cifra como FDVD.
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
-En la actualidad, todos los cifrados de sustitución simple se descifran con
-mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
-comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas
-más complejos de codificación, como el cifrado Vigenère, e incluso tiene
-aplicación en el sistema ROT13.
+## 2. CABECERA
 
-## 2. Resumen del proyecto
+En la _cabecera_ de todas las pantallas que conforman la aplicación, se encuentra el encabezado con el nombre del producto y una barra de navegación que permiten al usuario acceder a las secciones informativas de la app:
 
-¿Qué tengo que hacer exactamente? En este proyecto crearás una aplicación
-web que servirá para que el usuario pueda cifrar y descifrar un texto indicando
-un desplazamiento específico de caracteres (_offset_).
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso
-(qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de
-ejemplo:
+* ¿Qué es el cifrado césar?
+* ¿Qué utilidad tiene?
+* ¿Cómo puedo cifrar o descifrar un mensaje?
 
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
-  una zona de conflicto.
-* Mensajería secreta para parejas.
+## 3. PANTALLA PRINCIPAL
 
-## 3. Objetivos de aprendizaje
+La _Pantalla principal_ da la bienvenida al usuario y explica brevemente en qué consiste la aplicación.
+ En la parte inferior de esta pantalla se encuentra un botón con la leyenda “cifrar o descifrar un mensaje”, el cual permitirá que el usuario pueda acceder directamente a la pantalla que le permitirá utilizar la aplicación (Acceder a la Pantalla input).
 
-Trabajando individual aprenderás a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías.
 
-### HTML y CSS
+## 4. PANTALLA INPUT
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+La _Pantalla input_ es la pantalla donde se podrá ingresar el mensaje que se desee cifrar o descifrar. En ella se encuentra un cuadro de texto, donde el usuario podrá ingresar el mensaje que cifrará o descifrará con el uso de esta aplicación. Este mensaje será máximo de 1000 caracteres. En el encabezado del recuadro de texto se indica el número de caracteres máximos permitidos y notas adicionales donde se indica que la letra ñ, letras con acentos o con cualquier otro signo no sufren ningún tipo de transformación. 
+Debajo del recuadro de texto, se encuentra un cuadro numérico donde el usuario podrá seleccionar el numero offset en el que su mensaje será cifrado. Este cuadro tendrá la leyenda “Número de Cifrado César” para que sea más entendible para el usuario. El valor offset default será el numero “0” , lo cual enviará un mensaje sin transformación.
 
-### DOM
+Al final de la pantalla input se encuentran dos botones: 
 
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
+### Botón “cifrar mensaje”: 
+Cifrará el mensaje ingresado con el offset seleccionado y dirigirá al usuario a una pantalla Output donde se mostrará el mensaje cifrado. Arriba del mensaje se mostrará la leyenda “Tu mensaje cifrado está listo:” para mejorar la experiencia del usuario. Seguido del mensaje se indica el número offset en el que se realizó el cifrado para que sea sencillo para en usuario recordarlo y copiarlo junto con el mensaje para enviarlo sin la necesidad de escribirlo por él mismo.
 
-### JavaScript
+### Botón “Descifrar mensaje”: 
+Descifrará el mensaje ingresado con el offset seleccionado y dirigirá al usuario a una pantalla Output donde se mostrará el mensaje descifrado. Arriba del mensaje se mostrará la leyenda “Hemos descifrado tu mensaje y dice esto:” para mejorar la experiencia del usuario. Seguido del mensaje se indica el número offset que el usuario ingresó para descifrar el mensaje en cuestión, lo cual le permitirá verificar que ingresó el offset correcto y tener certeza de que su mensaje se descifró correctamente.
 
-* [ ] Manipulación de strings.
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Declaración correcta de variables (const & let)
+## 5. PANTALLAS OUTPUT
 
-### Testing
+Las _Pantallas Output_ son las pantallas en las que se mostrará el mensaje cifrado o descifrado que ingrese el usuario. 
+Para que la experiencia del usuario sea más personalizada existen dos tipos de pantalla output:
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+### Pantalla output para mensajes cifrados: 
 
-### Estructura del código y guía de estilo
+En esta pantalla se mostrará el mensaje cifrado. Arriba del mensaje se mostrará la leyenda “Tu mensaje cifrado está listo:” para mejorar la experiencia del usuario. Seguido del mensaje se indica el número offset en el que se realizó el cifrado para que sea sencillo para en usuario recordarlo y copiarlo junto con el mensaje para enviarlo sin la necesidad de escribirlo por él mismo.
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+### Pantalla output para mensajes descifrados: 
 
-### Git y GitHub
+En esta pantalla se mostrará el mensaje descifrado. Arriba del mensaje se mostrará la leyenda “Hemos descifrado tu mensaje y dice esto:” para mejorar la experiencia del usuario. Seguido del mensaje se indica el número offset que el usuario ingresó para descifrar el mensaje en cuestión, lo cual le permitirá verificar que ingresó el offset correcto y tener certeza de que su mensaje se descifró correctamente.
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+En la parte inferior de las pantallas output se encuentran dos botones, que facilitarán al usuario navegar por la aplicación:
 
-### UX
+### Botón “Cifrar o descifrar un mensaje nuevo”: 
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
+Este botón llevará al usuario a la pantalla input para que pueda ingresar otro mensaje y cifrarlo o descifrarlo. Este botón también limpiará el cuadro de texto y devolverá el recuadro offset a “0” para que el usuario pueda ingresar un mensaje nuevo sin la necesidad de borrar lo que ingresó anteriormente. 
 
-## 4. Consideraciones generales
+### Botón “Volver al inicio”: 
 
-* El equipo de coaches te dará un tiempo sugerido e indicaciones sobre si trabajar
-  sola o en equipo. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
-  te preocupes, lo aprenderás durante este proyecto.
+Este botón permitirá que el usuario regrese a la pantalla de inicio. Este botón también reestablecerá los valores originales de los recuadros de la “Pantalla input”.
 
-## 5. Criterios de aceptación mínimos del proyecto
 
-Usa este alfabeto simple (solamente mayúsculas y sin ñ):
+## 6. SECCIONES INFORMATIVAS
 
-* A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Las “Secciones informativas” son pantallas que contienen información que se considera muy relevante acerca de la aplicación, explicando en qué consiste, el alcance que podría tener en cuanto a usos y por supuesto, una breve guía de usuario. 
+Se incorporaron estas pantallas con el fin de informar al usuario pero también con el fin de invitarlo a utilizar la aplicación.
+ Se puede acceder a cada una de estas secciones por medio de los enlaces que direccionan al usuario a las pantallas que contienen esta información. Existen 3 pantallas de secciones informativas:
 
-### Definición del producto
+### Pantalla ¿Qué es el cifrado César?
+En esta pantalla de explica brevemente en qué consiste el cifrado césar. Dentro de la pantalla de incluye una imagen que ejemplifica el Cifrado César.
 
-En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
+### Pantalla ¿Qué utilidad tiene?
+Con el fin de mostrar la gran versatilidad que puede tener el uso de Mensajes cifrados, en esta pantalla se ejemplifican algunos de estos usos, dando la posibilidad de que el usuario imagine otras situaciones en las que cifrar un mensaje podría resultar útil para su vida cotidiana y se le explica lo sencillo que es cifrar sus mensajes por medio de esta aplicación.
+ 
+### Pantalla ¿Cómo cifrar o descifrar un mensaje?  
+En esta pantalla informativa, podemos encontrar una guía rápida del uso de esta aplicación. En esta Guía de usuario se explica cómo acceder la “Pantalla Input” desde la pantalla de Inicio. Posteriormente se muestra una imagen de la pantalla input para que el usuario pueda identificarla. Después se explican los pasos a seguir para ingresar un mensaje y para definir un offset (Número de Cifrado César), incluyendo la nota en la que se explica que la letra ñ y letras con otro tipo de carácter, no sufren ninguna transformación. Por último, se explica claramente qué botón presionar dependiendo si el usuario desea cifrar o descifrar su mensaje. 
+Como ya se mencionó, al final de cada una de estas secciones informativas, se invita al usuario a probar la aplicación y es por ello que en estas pantallas se incluyó un botón “Cifrar o descifrar un mensaje”, el cual dirigirá al usuario a la “Pantalla input” para empezar a descifrar un mensaje.
 
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
+NOTA: Este botón no hace “reset” de la “Pantalla input”, es decir, no reestablece los valores originales del cuadro de texto ni del cuadro offset, esto pensando en que el usuario pueda consultar las secciones informativas para aclarar dudas que pudieran surgir al momento de introducir su mensaje en pantalla input sin que se borre el mensaje que esté ingresando.
 
-### Interfaz de usuario (UI)
-
-La interfaz debe permitir al usuario:
-
-* Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que
-  el cifrado desplace cada caracter.
-* Insertar un mensaje (texto) que queremos cifrar.
-* Ver el resultado del mensaje cifrado.
-* Insertar un mensaje (texto) a descifrar.
-* Ver el resultado del mensaje descifrado.
-
-### Scripts / Archivos
-
-* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción a la aplicación, su funcionalidad y decisiones de
-  diseño que tomaron.
-* `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
-  debe contener tu _markup_ (HTML) e incluir el CSS y JavaScript necesario.
-* `src/cipher.js`: acá debes implementar el objeto `cipher`, el cual ya está
-  _exportado_ en el _boilerplate_. Este objeto (`cipher`) debe contener dos
-  métodos:
-  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
-    que queremos cifrar.
-  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la izquierda en el alfabeto y `string` el mensaje
-    (texto) que queremos descifrar.
-* `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
-  o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
-* `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y acá
-  tendrás que implementar los tests para `cipher.encode()` y `cipher.decode()`.
-
-## 6. Hacker edition
-
-Las secciones llamadas _Hacker Edition_ son **opcionales**. Si **terminaste**
-con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás
-profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
-
-La descripción general de este proyecto no menciona qué pasaría con las letras
-minúsculas y otros caracteres (como espacios, puntuación, ñ, ...). El
-boilerplate incluye algunos tests (comentados en principio) que puedes usar como
-punto de partida para implementar el soporte para estos casos.
-
-Tampoco se menciona qué pasaría si el offset fuera negativo. Como parte del
-hacker edition te invitamos a explorar también esta caso por tu cuenta.
-
-## 7. Consideraciones técnicas
-
-La lógica del proyecto debe estar implementada completamente en JavaScript. En
-este proyecto NO está permitido usar librerías o frameworks, solo JavaScript puro
-también conocido como Vanilla JavaScript.
-
-No se debe utilizar la _pseudo-variable_ `this`.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_
-y _lines_, y un mínimo del 50% de _branches_. El _boilerplate_ ya contiene el
-setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
-coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
-test`.
-
-El _boilerplate_ incluye tests (pruebas) de ejemplo como punto de partida.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio que contiene el _boilerplate_.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias y tests de ejemplo:
-
-```text
-./
-├── .babelrc
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── src
-│   ├── cipher.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── .eslintrc
-    └── cipher.spec.js
-```
-
-El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
-[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
-`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
-automáticamente antes de ejecutar las pruebas (tests) cuando usamos el comando
-`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
-configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
-información sobre el parser que usar (qué version de JavaScript/ECMAScript), el
-entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
-En cuanto a reglas/guías de estilo en sí,
-usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
+Dentro de estas pantallas también se incluyó un botón “Volver al inicio” para facilitar la navegación del usuario por las diferentes secciones de la aplicación.
 
 ***
 
-## 8. Pistas, tips y lecturas complementarias
+## 7. CONTENIDO DE LAS SECCIONES INFORMATIVAS DE LA APLICACIÓN.
 
-### Primeros pasos
+### ¿Qué es el Cifrado César?
+En criptografía, el cifrado César, también conocido como cifrado por desplazamiento, código de César o desplazamiento de César, es una de las técnicas de cifrado más simples y más usadas. Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto. Por ejemplo, con un desplazamiento de 3, la A sería sustituida por la D (situada 3 lugares a la derecha de la A), la B sería reemplazada por la E, etc. Este método debe su nombre a Julio César, que lo usaba para comunicarse con sus generales.
 
-1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
-  condiciones, algo como [Atom](https://atom.io/) o
-  [Code](https://code.visualstudio.com/).
-2. Para ejecutar los comandos a continuación necesitarás una :shell:
-  [UNIX Shell](https://github.com/Laboratoria/bootcamp/tree/master/topics/shell),
-  que es un programita que interpreta líneas de comando (command-line
-  interpreter) así como tener [git](https://github.com/Laboratoria/bootcamp/tree/master/topics/scm/01-git)
-  instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS,
-  ya tienes una _shell_ (terminal) instalada por defecto (y probablemente `git`
-  también). Si usas Windows puedes usar la versión completa de [Cmder](https://cmder.net/)
-  que incluye [Git bash](https://git-scm.com/download/win) y si tienes Windows 10
-  o superior puedes usar [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-3. Una de las integrantes del equipo debe realizar un :fork_and_knife:
-  [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-  tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
-  en ese repo. La otra integrante del equipo deber hacer un fork **del
-  repositorio de su compañera** y
-  [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
-  hacia el mismo.
-4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-  tu _fork_ a tu computadora (copia local).
-5. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
-  asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
-6. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
-  pruebas unitarias (unit tests) con el comando `npm test`.
-7. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
-8. A codear se ha dicho! :rocket:
+![caeser-cipher2](src\assets\img\cifradoCesar.png)
 
-### Recursos y temas relacionados
-
-A continuación un video de Michelle que te lleva a través de la fórmula
-matemática del Cifrado César y un par de cosas más que debes saber para
-resolver este proyecto. ¡Escúchala con detenimiento y sigue sus consejos! :)
-
-[![tips caesar cipher](https://img.youtube.com/vi/zd8eVrXhs7Y/0.jpg)](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
-
-[Link](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
-
-También una metodología para empezar a desarrollar tareas con JavaScript:
-
-[![Resolución de problemas con JavaScript](http://i3.ytimg.com/vi/lYfEmhLmu7A/hqdefault.jpg)](https://www.youtube.com/watch?v=lYfEmhLmu7A)
-
-[Link](https://www.youtube.com/watch?v=lYfEmhLmu7A)
-
-Terminal y shell de UNIX:
-
-[![Playlist de Terminal y shell de UNIX](https://img.youtube.com/vi/GB35Eyb-J4c/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-Control de versiones y trabajo colaborativo con Git y GitHub:
-
-[![Playlist de control de versiones y trabajo colaborativo](https://img.youtube.com/vi/F1EoBbvhaqU/0.jpg)](https://www.youtube.com/playlist?list=PLiAEe0-R7u8k9o3PbT3_QdyoBW_RX8rnV)
-
-[Link](https://www.youtube.com/playlist?list=PLiAEe0-R7u8nGH5TEHfSTeDNIvjZFe_Yd)
-
-Diseño de experiencia de usuario (User Experience Design):
-
-* Ideación
-* Prototipado (sketching)
-* Testeo e Iteración
-
-Desarrollo Front-end:
-
-* Valores
-* Tipos
-* Variables
-* Control de flujo
-* Tests unitarios
-* [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
-* [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
-* [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
-* [Documentación de NPM](https://docs.npmjs.com/)
-
-Organización del Trabajo:
-
-* [Metodologías Ágiles](https://www.youtube.com/watch?v=v3fLx7VHxGM)
-* [Scrum en menos de 2 minutos](https://www.youtube.com/watch?v=TRcReyRYIMg)
-* [Scrum en Detalle](https://www.youtube.com/watch?v=nOlwF3HRrAY&t=297s). No
-  esperamos que hagas todo eso desde este proyecto. Iremos profundizando poco a
-  poco a lo largo del -_bootcamp_.
-* [Guía para Cifrado César](https://docs.google.com/presentation/d/e/2PACX-1vTQ7-8LZDHrT4Y6AOBN72Nkfz1eJAeseBHpcHX8BSq0aFCFoZmuMjluMeyFNgK9ISKxTz0H03yGfJiT/pub?start=false&loop=false&delayms=60000)
-
-## 9. Criterios a considerar
-
-Esta sección está para ayudarte a llevar una guia de lo que vas completando.
+Esta manera de cifrar resulta ser muy útil para mantener en secreto algunos mensajes, sin embargo, también suena algo muy laborioso, pero con Mensajes Cifrados esto es muy sencillo.
+Esta aplicación te permite cifrar y descifrar mensajes al estilo Cifrado César de una manera rápida y sencilla.  Únicamente tienes que ingresar tu mensaje y seleccionar el número de Cifrado César o de desplazamientos en el que quieras cifrar o descifrar tu mensaje.
+¡Prueba con tu primer mensaje!
 
 
-* `README.md` incluye info sobre proceso y decisiones de diseño, explica quiénes son los usuarios y su relación, con el producto, explica cómo el producto soluciona los problemas/necesidades de los usuarios.
-* Sigue la configuracion del linter provista.
-* No olvides testear con pruebas unitarias.
-* Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
-  cifrado/descifrado.
-* Interfaz permite escribir un texto para ser cifrado.
-* Interfaz muestra el resultado del cifrado correctamente.
-* Interfaz permite escribir un texto para ser descifrado.
-* Interfaz muestra el resultado del descifrado correctamente.
+### ¿Qué utilidad tiene?
+Piénsalo. El Cifrado Cesar te permite escribir mensajes secretos en los que tú puedes elegir un número de desplazamientos de letras para cifrarlo. Podría resultar muy útil para proteger información sensible que quieras compartir con alguien más. Existe una amplia gama de aplicaciones para ese tipo de mensajes, desde cifrar mensajes en medio de una zona de conflictos, conservar en secreto la receta de la familia, mantener la exclusividad de un evento, proteger identidad del ganador en algún certamen para que no se sepa antes de tiempo o incluso para sorprender a alguien con una carta de amor muy original.
 
-### Parte Opcional: "Hacker edition"
-  
-  Si Haz completado tus objetivos de aprendizaje puedes intentar mejorar tu versión
-  añadiendo las siguientes caracteristicas:
-* Cifra/descifra minúsculas
-* Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
-* Permite usar un `offset` negativo.
+Con Mensajes cifrados puedes cifrar un mensaje definiendo el número de desplazamientos para que quien reciba el mensaje pueda descifrarlo al alcance de un “Click”.
+
+
+### ¿Cómo cifrar o descifrar un mensaje?
+Mensajes cifrados te permitirá cifrar mensajes al estilo “Cifrado César” de una manera muy sencilla.
+
+Primero, debes presionar el botón “cifrar o descifrar un mensaje”. Este botón te llevará a la página dónde podrás ingresar tu mensaje, la cual lucirá así:
+
+![caeser-cipher3](src\assets\img\pantallaInputFinal.png)
+
+Cuando estés en esa página, escribe tu mensaje en el cuadro de texto y selecciona el número de desplazamientos para cifrar o descifrar tu mensaje. (Máximo 1000 caracteres, sin acentos).
+NOTA: El cifrado césar solo cifra letras del alfabeto, no números ni otro tipo de signos, pero sí se pueden incluir en el mensaje, sólo que se conservarán tal y como están. Por el momento la letra “ñ” ni las letras con acentos o algún otro tipo de signo sufren alguna transformación. 
+
+Por último, da click en el botón “Cifrar mensaje” si quieres que tu mensaje sea cifrado o da click en el botón “Descifrar un mensaje” para descifrarlo.
+¡Y listo! Obtendrás tu mensaje cifrado o descifrado.  Verás qué sencillo es.
+
+Podrás volver a cifrar o descifrar mensajes las veces que quieras presionando el botón “Cifrar o descifrar un mensaje nuevo”.
