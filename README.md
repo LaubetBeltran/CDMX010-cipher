@@ -20,7 +20,11 @@ Por ello se decidió crear una aplicación con una interfaz sencilla y muy infor
 Este es el prototipo inicial del diseño de la aplicación:
 
 
+<<<<<<< HEAD
 ![prototipo](assets1\prototipo.jpg)
+=======
+![prototipo](CDMX010-cipher\src\assets\img\prototipo.jpg)
+>>>>>>> 3a4d4394829b7759f4679728019bd130886c3b54
 
 
 
