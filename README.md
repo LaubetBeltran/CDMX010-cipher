@@ -119,7 +119,7 @@ Primero, debes presionar el botón “cifrar o descifrar un mensaje”. Este bot
 
 ![pantalla-input-final](test/assets1/pantallaInputFinal.png)
 
-Cuando estés en esa página, escribe tu mensaje en el cuadro de texto y selecciona el número de desplazamientos para cifrar o descifrar tu mensaje. (Máximo 1000 caracteres, sin acentos).
+Cuando estés en esa página, escribe tu mensaje en el cuadro de texto y selecciona el número de desplazamientos para cifrar o descifrar tu mensaje. (Máximo 1000 caracteres).
 NOTA: El cifrado césar solo cifra letras del alfabeto, no números ni otro tipo de signos, pero sí se pueden incluir en el mensaje, sólo que se conservarán tal y como están. Por el momento la letra “ñ” ni las letras con acentos o algún otro tipo de signo sufren alguna transformación. 
 
 Por último, da click en el botón “Cifrar mensaje” si quieres que tu mensaje sea cifrado o da click en el botón “Descifrar un mensaje” para descifrarlo.
